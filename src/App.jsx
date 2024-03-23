@@ -27,7 +27,7 @@ function App() {
       })
   }, [])
 
-  function validate(name, price, desc) {
+  function validate(name, price, status, desc) {
 
     if (name.value.trim().length < 3) {
       alert("Name is empty");
@@ -49,7 +49,7 @@ function App() {
 
   function handleClick(e) {
     e.preventDefault();
-    const isValid = validate(name, price, desc);
+    const isValid = validate(name, price, status, desc);
 
     if (isValid) {
       const phone = {
@@ -94,7 +94,7 @@ function App() {
 
 {/* form */}
 
-        <h1 className='text-center'>Phone informations</h1>
+        <h1 className='text-center'>Informations about phones</h1>
 
         <form className='d-flex w-50 gap-3 flex-wrap flex-column mt-3 mx-auto'>
 
@@ -115,7 +115,7 @@ function App() {
 
 {/* cards */}
 
-        <div className="cards d-flex flex-wrap gap-4 mt-5 justify-content-center">
+        <div className="cards d-flex flex-wrap gap-4 mt-5 justify-content-center mb-4">
             {
               loader && <PacmanLoader color="#36d7b7" size="2rem" />
             }

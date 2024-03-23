@@ -8,6 +8,7 @@ function Card(props) {
               <h6 className="card-status my-2 fs-4 text-body-secondary">{status}</h6>
               <h6 className="card-number my-2 fs-5">${price}</h6>
               <p className="card-text">{description}</p>
+              <div className="text-danger" style={{cursor: "pointer"}}>Delete</div>
             </div>
         </div>
     )
